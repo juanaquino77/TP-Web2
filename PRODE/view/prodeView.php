@@ -1,23 +1,23 @@
 <?php
 include_once 'libs/Smarty.class.php';
 
-class prodeView 
+class prodeView extends View
 {
-	private $smarty;
-
-	function __construct(argument)
+	//private $smarty;
+	//private $cabecera;
+	//private $titulo;
+	
+	function __construct()
 	{
-		  $this->smarty = new Smarty();
-
+		//$this->smarty = new Smarty();
+		//$this->cabecera = 'PRODE UNION';
+		//$this->titulo = 'PRODE CLUB UNION';
 	}
 	function mostrar()
 	{
-		$cabecera = 'PRODE UNION';
-		$this->smarty->assign('cabecera', $cabecera);
+		//$this->smarty->assign('titulo', $this->titulo);
+		//$this->smarty->assign('cabecera', $this->cabecera);
   		$this->smarty->display('templates/index.tpl');
-		# code...
 	}
 }
-
-
 ?>

@@ -11,12 +11,11 @@ $(document).ready(function(){
 
 function cargarPagina() {
     $.ajax({
-          "url": "http://localhost/PRODE/agregarEstadio",
+          "url": "http://localhost/PRODE/mostrarEquipos",
           "method": "GET",
           "dataType": "HTML",
           "success": function (data) {
-            console.log(data);
-            $('#agregar').html(data);
+            $('#main').html(data);
           },
           "error": function (){
             alert("error");
@@ -30,7 +29,7 @@ function cargarPagina() {
           "dataType": "HTML",
           "success": function (data) {
             console.log(data);
-            $('#agregar').html(data);
+            $('#main').html(data);
           },
           "error": function (){
             alert("error");

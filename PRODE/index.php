@@ -1,7 +1,7 @@
 <?php
 include_once 'tareas.php';
 include_once 'libs/Smarty.class.php';
-define('HOME', 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/prode');
+define('HOME', 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/index');
 
 function finalizarTarea($params){
   markCompletedTarea($params[0]);
@@ -37,7 +37,7 @@ function agregar(){
   $id = $_POST['idClub'];
   $nombreEstadio = $_POST['nombreEstadio'];
   insertEstadio($id, $nombreEstadio);
-  header('Location: '.HOME);
+  //header('Location: '.HOME);
 }
 function agregarPartido(){
   $jornada = getJornada(1);
@@ -67,8 +67,6 @@ function home()
   $jornada = getJornada(1);
   $usuario = getUsuario();
   $equipos = getEquipos();
-  //print_r($equipos);
-
   $titulo = 'PRODE CLUB UNION';
   $cabecera = 'PRODE UNION';
   $smarty = new Smarty();

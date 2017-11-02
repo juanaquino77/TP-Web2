@@ -1,0 +1,32 @@
+ {include file='menuAside.tpl'}
+
+              {include file='main.tpl'}
+
+
+                     <div class="col-md-3 col-md-3">
+          {include file='menuAside.tpl'}
+        </div>
+    <script src="js/app.js"></script>
+
+
+
+'{include file='agregarEstadio.tpl'}
+
+             if(array_key_exists($action,ConfigApp::$ACTIONS)){
+          $params = $urlData[ConfigApp::$PARAMS];
+          die($params[0]);
+          $metodo = ConfigApp::$ACTIONS[$action];
+          print_r($params);
+          if(isset($params) &&  $params != null){
+            echo $controller->agregarEstadio();
+          }
+          else{
+            echo $controller->$action();
+          }
+      }
+      else{
+            echo $controller->index();
+          }
+
+            {include file='main.tpl'}
+          

@@ -1,7 +1,4 @@
 <div>
-	<div id="agregar">
-    	
-	</div>
-	<div>
+	<div id="agregar">	
 	</div>
 </div>

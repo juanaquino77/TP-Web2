@@ -1,5 +1,8 @@
 <div>
-    <form action="agregar" method="post">
+    
+{include file='header.tpl'}
+<div>
+    <form action="guardarEstadio" method="post">
         <select name="idClub" class="form-control" id="idClub">
             {foreach from=$equipos item=equipo} 
                 <option value={$equipo['Id_equipo']}>{$equipo['Nombre']}</option>              
@@ -11,4 +14,5 @@
         </div>
         <button type="submit" class="btn  btn-success">Agregar Estadio</button>
     </form>
+</div>
 </div>

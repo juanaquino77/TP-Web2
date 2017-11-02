@@ -7,7 +7,7 @@
         <div class="col-12 col-md-9">
           <h1>{{$cabecera}}</h1>
           <div>
-              {include file='agregarEstadio.tpl'}
+              {include file='equipos.tpl'}
           </div>
         </div>
       </div>
